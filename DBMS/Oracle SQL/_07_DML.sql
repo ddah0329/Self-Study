@@ -1,39 +1,42 @@
---DML - 데이터를 조작하는 언어
-
---CREATE
+-------------------------------------------------------------
+-- DML : 데이터를 조작하는 언어
+-------------------------------------------------------------
+-- CREATE
 CREATE TABLE TBL_MEMBER(
 	MEMBER_NAME VARCHAR2(500),
 	MEMBER_AGE NUMBER
 );
-
+-------------------------------------------------------------
 -- INSERT : 데이터 삽입
-SELECT * FROM TBL_MEMBER;
-
+-------------------------------------------------------------
 INSERT INTO TBL_MEMBER
 VALUES('홍길동', 20);
 
 INSERT INTO TBL_MEMBER
 VALUES('김철수', 25);
 
---MEMBER_NAME에만 값을 넣을 것이다. 
+-- MEMBER_NAME에만 값을 넣을 것이다. 
 INSERT INTO TBL_MEMBER(MEMBER_NAME)
 VALUES('이유리');
 
---UPDATE: 
+
+-------------------------------------------------------------
+-- UPDATE: 
+-------------------------------------------------------------
 -- 김철수 -> 신짱구
 UPDATE TBL_MEMBER
 SET MEMBER_NAME = '신짱구'
 WHERE MEMBER_NAME = '김철수'
 
-SELECT * FROM TBL_MEMBER
 
 --이유리 나이 27 수정
 UPDATE TBL_MEMBER
 SET MEMBER_AGE = 27
 WHERE MEMBER_AGE IS NULL;
 
-
---DELETE
+-------------------------------------------------------------
+-- DELETE
+-------------------------------------------------------------
 -- 테이블 전체 삭제
 DELETE FROM TBL_MEMBER;
 
@@ -41,7 +44,12 @@ DELETE FROM TBL_MEMBER;
 DELETE FROM TBL_MEMBER
 WHERE MEMBER_NAME = '이유리';
 
+
 -------------------------------------------------------------
+-- [실습]
+-------------------------------------------------------------
+-- 삽입 {1.신라면} {2.아몬드 빼빼로, 1200} 
+-- {3.오리지널 빼빼로, 1200} {4.진라면,1100} {5.삼양라면,900}
 
 --상품 테이블 생성
 CREATE TABLE TBL_PRODUCT(
@@ -49,11 +57,6 @@ CREATE TABLE TBL_PRODUCT(
 	PRODUCT_NAME VARCHAR2(500),
 	PRODUCT_PRICE NUMBER
 );
-
-
--- [실습]
--- 삽입 {1.신라면} {2.아몬드 빼빼로, 1200} 
--- {3.오리지널 빼빼로, 1200} {4.진라면,1100} {5.삼양라면,900}
 
 INSERT INTO TBL_PRODUCT(PRODUCT_NUMBER,PRODUCT_NAME)
 VALUES(1,'신라면');
