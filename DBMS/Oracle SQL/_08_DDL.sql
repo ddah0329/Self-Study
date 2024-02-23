@@ -85,19 +85,3 @@ ALTER TABLE TBL_MY_MUSIC
 DROP TABLE TBL_MY_MUSIC  
 
 SELECT * FROM TBL_MY_MUSIC;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
