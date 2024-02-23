@@ -89,20 +89,3 @@ DELETE FROM TBL_PRODUCT
 WHERE PRODUCT_NAME LIKE '%라면';
 
 SELECT * FROM TBL_PRODUCT;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
